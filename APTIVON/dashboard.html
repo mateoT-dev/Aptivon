@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Aptivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="dashboard" class="app-body">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="app-layout">
+    <aside class="sidebar glass" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">A</span>
+          <span>Aptivon</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-item active" href="dashboard.html">Dashboard</a>
+        <a class="nav-item" href="quiz.html">Quiz Arena</a>
+        <a class="nav-item" href="leaderboard.html">Leaderboard</a>
+        <a class="nav-item" href="qa.html">Q&amp;A Hub</a>
+        <a class="nav-item" href="profile.html">Profile</a>
+      </nav>
+      <button id="logoutButton" class="button button-secondary full-width">Logout</button>
+    </aside>
+
+    <main class="app-main">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Main control center</p>
+          <h1 id="dashboardGreeting">Good morning</h1>
+        </div>
+        <div class="profile-chip glass">
+          <div class="avatar" id="dashboardAvatar">A</div>
+          <div>
+            <strong id="dashboardUsername">Student</strong>
+            <span id="dashboardRankText"></span>
+          </div>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card glass">
+          <span>Points</span>
+          <strong id="statPoints">0</strong>
+        </article>
+        <article class="stat-card glass">
+          <span>Rank</span>
+          <strong id="statRank">#--</strong>
+        </article>
+        <article class="stat-card glass">
+          <span>Accuracy</span>
+          <strong id="statAccuracy">0%</strong>
+          <div class="progress-track"><div id="accuracyProgress" class="progress-fill"></div></div>
+        </article>
+        <article class="stat-card glass">
+          <span>Streak</span>
+          <strong id="statStreak">0 days</strong>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Quick actions</span>
+              <h2>Make your next move</h2>
+            </div>
+          </div>
+          <div class="action-grid">
+            <a class="action-card" href="quiz.html">
+              <strong>Start Quiz</strong>
+              <span>Jump into an adaptive session</span>
+            </a>
+            <a class="action-card" href="leaderboard.html">
+              <strong>View Leaderboard</strong>
+              <span>Track who is moving fastest</span>
+            </a>
+            <a class="action-card" href="qa.html">
+              <strong>Open Q&amp;A</strong>
+              <span>Get answers from the community</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">AI feedback</span>
+              <h2>Learning pulse</h2>
+            </div>
+          </div>
+          <p id="aiFeedback" class="ai-feedback">Analyzing your recent performance...</p>
+        </article>
+
+        <article class="panel glass wide-panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Progress chart</span>
+              <h2>Recent quiz performance</h2>
+            </div>
+          </div>
+          <div id="progressChart" class="chart-bars"></div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Leaderboard preview</span>
+              <h2>Top 3 learners</h2>
+            </div>
+          </div>
+          <div id="leaderboardPreview" class="mini-list"></div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Activity feed</span>
+              <h2>Recent actions</h2>
+            </div>
+          </div>
+          <div id="activityFeed" class="feed-list"></div>
+        </article> 
+      </section>
+    </main>
+  </div>
+
+  <div id="achievementPopup" class="achievement-popup hidden"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

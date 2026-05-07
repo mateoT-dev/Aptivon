@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Aptivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login" class="auth-body">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="auth-shell">
+    <section class="auth-panel glass">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">A</span>
+        <span>Aptivon</span>
+      </a>
+      <div class="auth-copy">
+        <span class="eyebrow">Welcome back</span>
+        <h1>Log in to continue your climb.</h1>
+        <p>Re-enter your learning arena, pick up your streak, and challenge the leaderboard.</p>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>
+          <span>Email</span>
+          <input type="email" id="loginEmail" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </label>
+        <button class="button button-primary glow" type="submit">Login</button>
+      </form>
+
+      <p class="form-note">Need an account? <a href="register.html">Create one</a></p>
+      <div id="authMessage" class="inline-message"></div>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

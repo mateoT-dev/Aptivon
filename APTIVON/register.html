@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Aptivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="register" class="auth-body">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="auth-shell">
+    <section class="auth-panel glass">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">A</span>
+        <span>Aptivon</span>
+      </a>
+      <div class="auth-copy">
+        <span class="eyebrow">Create your account</span>
+        <h1>Enter the adaptive learning arena.</h1>
+        <p>Set up your profile, unlock personalized quizzes, and start competing from day one.</p>
+      </div>
+
+      <form id="registerForm" class="auth-form">
+        <label>
+          <span>Username</span>
+          <input type="text" id="registerUsername" placeholder="Choose a username" minlength="3" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" id="registerEmail" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" id="registerPassword" placeholder="Create a strong password" minlength="8" required>
+        </label>
+        <div class="strength-meter">
+          <div id="passwordStrengthFill"></div>
+        </div>
+        <p id="passwordStrengthText" class="helper-text">Strength: Waiting for input</p>
+        <label>
+          <span>Confirm password</span>
+          <input type="password" id="registerConfirmPassword" placeholder="Repeat your password" minlength="8" required>
+        </label>
+        <button class="button button-primary glow" type="submit">Create Account</button>
+      </form>
+
+      <p class="form-note">Already registered? <a href="login.html">Login</a></p>
+      <div id="registerMessage" class="inline-message"></div>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

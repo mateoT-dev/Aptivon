@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Arena | Aptivon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="quiz" class="app-body">
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar glass" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">A</span>
+          <span>Aptivon</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="dashboard.html">Dashboard</a>
+        <a class="nav-item active" href="quiz.html">Quiz Arena</a>
+        <a class="nav-item" href="leaderboard.html">Leaderboard</a>
+        <a class="nav-item" href="qa.html">Q&A Hub</a>
+        <a class="nav-item" href="profile.html">Profile</a>
+      </nav>
+
+      <button id="logoutButton" class="button button-secondary full-width">
+        Logout
+      </button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="app-main">
+
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Quiz arena</p>
+          <h1>Test your thinking under pressure.</h1>
+        </div>
+      </header>
+
+      <!-- ========================= -->
+      <!-- 🟢 QUIZ START SCREEN -->
+      <!-- ========================= -->
+      <section id="quizStartPanel" class="panel glass" style="margin-bottom:20px;">
+        <h2>Choose Quiz Category</h2>
+
+        <select id="categorySelect" class="select">
+          <option value="random">Random</option>
+          <option value="mixed">Mixed (All Topics)</option>
+          <option value="math">Math</option>
+          <option value="physics">Physics</option>
+          <option value="chemistry">Chemistry</option>
+          <option value="history">History</option>
+          <option value="programming">Programming</option>
+          <option value="biology">Biology</option>
+          <option value="space">Space</option>
+        </select>
+
+        <button id="startQuizBtn" class="button button-primary glow" style="margin-top:15px;">
+          Start Quiz
+        </button>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 🟡 QUIZ AREA (HIDDEN UNTIL START) -->
+      <!-- ========================= -->
+      <section id="quizArea" class="quiz-layout" style="display:none;">
+
+        <!-- QUESTION PANEL -->
+        <article class="panel glass quiz-panel">
+
+          <span class="eyebrow">Current question</span>
+
+          <h2 id="quizQuestion">Loading question...</h2>
+
+          <div id="quizOptions" class="option-list"></div>
+
+          <button id="nextQuestionButton" class="button button-primary glow" disabled>
+            Next Question
+          </button>
+        </article>
+
+        <!-- SIDE PANEL -->
+        <aside class="panel glass quiz-side-panel">
+
+          <span class="eyebrow">Session data</span>
+
+          <h2>Performance monitor</h2>
+
+          <div class="session-metric">
+            <span>Current score</span>
+            <strong id="quizScore">0</strong>
+          </div>
+
+          <div class="session-metric">
+            <span>Accuracy</span>
+            <strong id="quizAccuracy">0%</strong>
+          </div>
+
+          <div class="session-metric">
+            <span>AI coach</span>
+            <p id="quizFeedback">
+              Waiting for quiz start...
+            </p>
+          </div>
+
+        </aside>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- TOASTS -->
+  <div id="xpToast" class="xp-toast hidden"></div>
+  <div id="achievementPopup" class="achievement-popup hidden"></div>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>

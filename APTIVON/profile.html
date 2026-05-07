@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Aptivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="profile" class="app-body">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="app-layout">
+    <aside class="sidebar glass" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">A</span>
+          <span>Aptivon</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="dashboard.html">Dashboard</a>
+        <a class="nav-item" href="quiz.html">Quiz Arena</a>
+        <a class="nav-item" href="leaderboard.html">Leaderboard</a>
+        <a class="nav-item" href="qa.html">Q&amp;A Hub</a>
+        <a class="nav-item active" href="profile.html">Profile</a>
+      </nav>
+      <button id="logoutButton" class="button button-secondary full-width">Logout</button>
+    </aside>
+
+    <main class="app-main">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Profile</p>
+          <h1>Your Aptivon identity</h1>
+        </div>
+      </header>
+
+      <section class="profile-grid">
+        <article class="panel glass profile-card">
+          <div class="profile-header">
+            <div class="avatar large" id="profileAvatar">A</div>
+            <div>
+              <h2 id="profileUsername">Student</h2>
+              <p id="profileEmail">student@example.com</p>
+            </div>
+          </div>
+          <div class="profile-stats">
+            <div>
+              <span>Total Points</span>
+              <strong id="profilePoints">0</strong>
+            </div>
+            <div>
+              <span>Quizzes Taken</span>
+              <strong id="profileQuizzes">0</strong>
+            </div>
+            <div>
+              <span>Accuracy</span>
+              <strong id="profileAccuracy">0%</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Achievements</span>
+              <h2>Unlocked badges</h2>
+            </div>
+          </div>
+          <div id="badgeGrid" class="badge-grid"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
